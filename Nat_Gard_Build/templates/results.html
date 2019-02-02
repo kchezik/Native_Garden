@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topleft" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="http://kchezik.github.io/" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Kyle Chezik</a>
+    <a href="https://github.com/kchezik" class="w3-bar-item w3-button w3-text-grey w3-hover-black">GitHub</a>
+    <a href="https://www.linkedin.com/in/kyle-chezik/" class="w3-bar-item w3-button w3-text-grey w3-hover-black">LinkedIn</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content w3-content w3-padding" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+	<span class="w3-button w3-xxlarge w3-white w3-left" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+	<h1><b>Native Garden Builder</b></h1>
+	<p><b>Find Your Native Aesthetic</b></p>
+		  <form method="POST" action="/" enctype="multipart/form-data">
+	  <div class="w3-third">
+		  <p class="w3-padding-16">
+<font size=4>Upload a Photo of a Plant You Like!</font>
+			  <input type="file" name="file">
+		  </p>
+	  </div>
+	  <div class="w3-third">
+		  <p class="w3-padding-16">
+		  <span class="input-group-btn">
+		  <button class="w3-button w3-black" type="input">Find Native Plants</button>
+		  </span>
+		  </p>
+	  </div>
+	  <div class="w3-third">
+		  <p class="w3-padding-16">
+			  <select class="w3-select" class="form-control" name="dropdown">
+				  <option value = "" disabled selection>Select Your State</option>
+				  <option value = "AL">Alabama</option>
+				  <option value = "AK">Alaska</option>
+				  <option value = "AZ">Airizona</option>
+				  <option value = "AR">Arkansas</option>
+				  <option value = "CA">California</option>
+				  <option value = "CO">Colorado</option>
+				  <option value = "CT">Connecticut</option>
+				  <option value = "DE">Delaware</option>
+				  <option value = "FL">Florida</option>
+				  <option value = "GA">Georgia</option>
+				  <option value = "HI">Hawaii</option>
+				  <option value = "ID">Idaho</option>
+				  <option value = "IL">Illinois</option>
+				  <option value = "IN">Indiana</option>
+				  <option value = "IA">Iowa</option>
+				  <option value = "KS">Kansas</option>
+				  <option value = "KY">Kentucky</option>
+				  <option value = "LA">Louisiana</option>
+				  <option value = "ME">Maine</option>
+				  <option value = "MD">Maryland</option>
+				  <option value = "MA">Massachusetts</option>
+				  <option value = "MI">Michigan</option>
+				  <option value = "MN">Minnesota</option>
+				  <option value = "MS">Mississippi</option>
+				  <option value = "MO">Missouri</option>
+				  <option value = "MT">Montana</option>
+				  <option value = "NE">Nebraska</option>
+				  <option value = "NV">Nevada</option>
+				  <option value = "NH">New Hampshire</option>
+				  <option value = "NJ">New Jersey</option>
+				  <option value = "NM">New Mexico</option>
+				  <option value = "NY">New York</option>
+				  <option value = "NC">North Carolina</option>
+				  <option value = "ND">North Dakota</option>
+				  <option value = "OH">Ohio</option>
+				  <option value = "OK">Oklahoma</option>
+				  <option value = "OR">Oregon</option>
+				  <option value = "PA">Pennsylvania</option>
+				  <option value = "RI">Rhode Island</option>
+				  <option value = "SC">South Carolina</option>
+				  <option value = "SD">South Dakota</option>
+				  <option value = "TN">Tennessee</option>
+				  <option value = "TX">Texas</option>
+				  <option value = "UT">Utah</option>
+				  <option value = "VT">Vermont</option>
+				  <option value = "VA">Verginia</option>
+				  <option value = "WA">Washington</option>
+				  <option value = "WV">West Verginia</option>
+				  <option value = "WI">Wisconsin</option>
+				  <option value = "WY">Wyoming</option>
+			  </select>
+		  </p>
+	  </div>
+		  </form>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row-padding w3-padding-16 w3-center" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src={{"/static/pics/"+matches.iloc[0]}} style="width:100%">
+    <h3>{{cmn.iloc[0]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[0]}} <i>{{sci_nm.iloc[0]}}</i></a> enjoys {{sn.iloc[0]}} and {{wtr.iloc[0]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[2]}} style="width:100%">
+    <h3>{{cmn.iloc[2]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[2]}} <i>{{sci_nm.iloc[2]}}</i></a> enjoys {{sn.iloc[2]}} and {{wtr.iloc[2]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[5]}} style="width:100%">
+    <h3>{{cmn.iloc[5]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[5]}} <i>{{sci_nm.iloc[5]}}</i></a> enjoys {{sn.iloc[5]}} and {{wtr.iloc[5]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[8]}} style="width:100%">
+    <h3>{{cmn.iloc[8]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[8]}} <i>{{sci_nm.iloc[8]}}</i></a> enjoys {{sn.iloc[8]}} and {{wtr.iloc[8]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[11]}} style="width:100%">
+    <h3>{{cmn.iloc[11]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[11]}} <i>{{sci_nm.iloc[11]}}</i></a> enjoys {{sn.iloc[11]}} and {{wtr.iloc[11]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[14]}} style="width:100%">
+    <h3>{{cmn.iloc[14]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[14]}} <i>{{sci_nm.iloc[14]}}</i></a> enjoys {{sn.iloc[14]}} and {{wtr.iloc[14]}} conditions.</p>
+  </div>
+
+  <div class="w3-third">
+    <img src={{"/static/tmp/"+original}} style="width:100%">
+    <h3>Your Image</h3>
+    <p>Images nearest your image are considered most similar.</p>
+    <img src={{"/static/pics/"+matches.iloc[3]}} style="width:100%">
+    <h3>{{cmn.iloc[3]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[3]}} <i>{{sci_nm.iloc[3]}}</i></a> enjoys {{sn.iloc[3]}} and {{wtr.iloc[3]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[6]}} style="width:100%">
+    <h3>{{cmn.iloc[6]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[6]}} <i>{{sci_nm.iloc[6]}}</i></a> enjoys {{sn.iloc[6]}} and {{wtr.iloc[6]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[9]}} style="width:100%">
+    <h3>{{cmn.iloc[9]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[9]}} <i>{{sci_nm.iloc[9]}}</i></a> enjoys {{sn.iloc[9]}} and {{wtr.iloc[9]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[12]}} style="width:100%">
+    <h3>{{cmn.iloc[12]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[12]}} <i>{{sci_nm.iloc[12]}}</i></a> enjoys {{sn.iloc[12]}} and {{wtr.iloc[12]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[15]}} style="width:100%">
+    <h3>{{cmn.iloc[15]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[15]}} <i>{{sci_nm.iloc[15]}}</i></a> enjoys {{sn.iloc[15]}} and {{wtr.iloc[15]}} conditions.</p>
+  </div>
+
+  <div class="w3-third">
+    <img src={{"/static/pics/"+matches.iloc[1]}} style="width:100%">
+    <h3>{{cmn.iloc[1]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[1]}} <i>{{sci_nm.iloc[1]}}</i></a> enjoys {{sn.iloc[1]}} and {{wtr.iloc[1]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[4]}} style="width:100%">
+    <h3>{{cmn.iloc[4]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[4]}} <i>{{sci_nm.iloc[4]}}</i></a> enjoys {{sn.iloc[4]}} and {{wtr.iloc[4]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[7]}} style="width:100%">
+    <h3>{{cmn.iloc[7]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[7]}} <i>{{sci_nm.iloc[7]}}</i></a> enjoys {{sn.iloc[7]}} and {{wtr.iloc[7]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[10]}} style="width:100%">
+    <h3>{{cmn.iloc[10]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[10]}} <i>{{sci_nm.iloc[10]}}</i></a> enjoys {{sn.iloc[10]}} and {{wtr.iloc[10]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[13]}} style="width:100%">
+    <h3>{{cmn.iloc[13]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[13]}} <i>{{sci_nm.iloc[13]}}</i></a> enjoys {{sn.iloc[13]}} and {{wtr.iloc[13]}} conditions.</p>
+    <img src={{"/static/pics/"+matches.iloc[16]}} style="width:100%">
+    <h3>{{cmn.iloc[16]}}</h3>
+    <p><a href = {{"https://www.wildflower.org/plants/result.php?id_plant="+ids.iloc[16]}} <i>{{sci_nm.iloc[16]}}</i></a> enjoys {{sn.iloc[16]}} and {{wtr.iloc[16]}} conditions.</p>
+  </div>
+</div>
+
+<div class="w3-row-padding w3-center" style="margin-top:8px">
+<h3>Similarity by Plant Group</h3>
+<div class="w3-half">
+<h4>North America </h4>
+    <img src={{"/static/tmp/"+imgfilename1}} style="width:100%">
+</div>
+<div class="w3-half">
+<h4>{{state}} State</h4>
+    <img src={{"/static/tmp/"+imgfilename2}} style="width:100%">
+</div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer id="contact" class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+	<!--  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  <p class="w3-medium"><h1>Kyle Chezik</h1></p>
+  <p class="w3-medium"><h4>kchezik@gmail.com</h1></p>
+</footer>
+ 
+
+<script>
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topleft" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="http://kchezik.github.io/" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Kyle Chezik</a>
+    <a href="https://github.com/kchezik" class="w3-bar-item w3-button w3-text-grey w3-hover-black">GitHub</a>
+    <a href="https://www.linkedin.com/in/kyle-chezik/" class="w3-bar-item w3-button w3-text-grey w3-hover-black">LinkedIn</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+	<span class="w3-button w3-xxlarge w3-white w3-left" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+	<h1><b>Native Garden Builder</b></h1>
+	<p><b>Find Your Native Aesthetic</b></p>
+		  <form method="POST" action="/" enctype="multipart/form-data">
+	  <div class="w3-third">
+		  <p class="w3-padding-16">
+<font size=4>Upload a Photo of a Plant You Like!</font>
+			  <input type="file" name="file">
+		  </p>
+	  </div>
+	  <div class="w3-third">
+		  <p class="w3-padding-16">
+		  <span class="input-group-btn">
+		  <button class="w3-button w3-black" type="input">Find Native Plants</button>
+		  </span>
+		  </p>
+	  </div>
+	  <div class="w3-third">
+		  <p class="w3-padding-16">
+			  <select class="w3-select" class="form-control" name="dropdown">
+				  <option value = "" disabled selection>Select Your State</option>
+				  <option value = "AL">Alabama</option>
+				  <option value = "AK">Alaska</option>
+				  <option value = "AZ">Airizona</option>
+				  <option value = "AR">Arkansas</option>
+				  <option value = "CA">California</option>
+				  <option value = "CO">Colorado</option>
+				  <option value = "CT">Connecticut</option>
+				  <option value = "DE">Delaware</option>
+				  <option value = "FL">Florida</option>
+				  <option value = "GA">Georgia</option>
+				  <option value = "HI">Hawaii</option>
+				  <option value = "ID">Idaho</option>
+				  <option value = "IL">Illinois</option>
+				  <option value = "IN">Indiana</option>
+				  <option value = "IA">Iowa</option>
+				  <option value = "KS">Kansas</option>
+				  <option value = "KY">Kentucky</option>
+				  <option value = "LA">Louisiana</option>
+				  <option value = "ME">Maine</option>
+				  <option value = "MD">Maryland</option>
+				  <option value = "MA">Massachusetts</option>
+				  <option value = "MI">Michigan</option>
+				  <option value = "MN">Minnesota</option>
+				  <option value = "MS">Mississippi</option>
+				  <option value = "MO">Missouri</option>
+				  <option value = "MT">Montana</option>
+				  <option value = "NE">Nebraska</option>
+				  <option value = "NV">Nevada</option>
+				  <option value = "NH">New Hampshire</option>
+				  <option value = "NJ">New Jersey</option>
+				  <option value = "NM">New Mexico</option>
+				  <option value = "NY">New York</option>
+				  <option value = "NC">North Carolina</option>
+				  <option value = "ND">North Dakota</option>
+				  <option value = "OH">Ohio</option>
+				  <option value = "OK">Oklahoma</option>
+				  <option value = "OR">Oregon</option>
+				  <option value = "PA">Pennsylvania</option>
+				  <option value = "RI">Rhode Island</option>
+				  <option value = "SC">South Carolina</option>
+				  <option value = "SD">South Dakota</option>
+				  <option value = "TN">Tennessee</option>
+				  <option value = "TX">Texas</option>
+				  <option value = "UT">Utah</option>
+				  <option value = "VT">Vermont</option>
+				  <option value = "VA">Verginia</option>
+				  <option value = "WA">Washington</option>
+				  <option value = "WV">West Verginia</option>
+				  <option value = "WI">Wisconsin</option>
+				  <option value = "WY">Wyoming</option>
+			  </select>
+		  </p>
+	  </div>
+		  </form>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row-padding w3-padding-16 w3-center" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="/static/pics/ABEL.jpg" style="width:100%">
+    <img src="/static/pics/ACCI.jpg" style="width:100%">
+    <img src="/static/pics/ACSP12.jpg" style="width:100%">
+    <img src="/static/pics/ACTR.jpg" style="width:100%">
+    <img src="/static/pics/AGEX.jpg" style="width:100%">
+    <img src="/static/pics/ALCAM.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="/static/pics/ALLU.jpg" style="width:100%">
+    <img src="/static/pics/ALMA10.jpg" style="width:100%">
+    <img src="/static/pics/AMCA6.jpg" style="width:100%">
+    <img src="/static/pics/AMJA.jpg" style="width:100%">
+    <img src="/static/pics/AMTA2.jpg" style="width:100%">
+    <img src="/static/pics/ANGLH.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="/static/pics/ANPOG.jpg" style="width:100%">
+    <img src="/static/pics/ANTE2.jpg" style="width:100%">
+    <img src="/static/pics/AQFLF.jpg" style="width:100%">
+    <img src="/static/pics/ARCO9.jpg" style="width:100%">
+    <img src="/static/pics/ARNU2.jpg" style="width:100%">
+    <img src="/static/pics/ASSP.jpg" style="width:100%">
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer id="contact" class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+	<!--  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  <p class="w3-medium"><h1>Kyle Chezik</h1></p>
+  <p class="w3-medium"><h4>kchezik@gmail.com</h1></p>
+</footer>
+ 
+
+<script>
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
+
